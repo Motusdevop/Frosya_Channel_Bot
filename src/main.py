@@ -28,6 +28,9 @@ async def main():
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
+    print('Bot Started')
+    print(f'ANEKDOT_TIME = {settings.anekdot_time}\nNIGHT_TIME = {settings.night_time}')
+
     process.join()
 
 
