@@ -25,11 +25,11 @@ async def main():
     process = Process(target=worker)
     process.start()
 
-    await bot.delete_webhook(drop_pending_updates=True)
-    await dp.start_polling(bot)
-
     print('Bot Started')
     print(f'ANEKDOT_TIME = {settings.anekdot_time}\nNIGHT_TIME = {settings.night_time}')
+
+    await bot.delete_webhook(drop_pending_updates=True)
+    await dp.start_polling(bot)
 
     process.join()
 
