@@ -1,6 +1,7 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import SecretStr
 
+from typing import Any
 
 class Settings(BaseSettings):
     bot_token: SecretStr
@@ -8,8 +9,8 @@ class Settings(BaseSettings):
     admin_id: int
     channel_id: int
 
-    anekdot_time: str
-    night_time: str
+    anekdot_time: Any
+    night_time: Any
 
     model_config = SettingsConfigDict(env_file='.env', env_file_encoding='utf-8')
 
