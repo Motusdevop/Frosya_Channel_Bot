@@ -13,14 +13,14 @@ from random import shuffle
 
 async def scheduler(bot: Bot):
 
-    anekdot_time = settings.anekdot_time
+    # anekdot_time = settings.anekdot_time
     night_time = settings.night_time
 
     while True:
         time = datetime.datetime.now().strftime('%H:%M')
-        if time == anekdot_time:
-            await send_anekdot(bot)
-        elif time == night_time:
+        # if time == anekdot_time:
+        #     await send_anekdot(bot)
+        if time == night_time:
             await send_goodnight(bot)
         await asyncio.sleep(60)
 
