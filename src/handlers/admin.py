@@ -1,30 +1,39 @@
 from aiogram import Router
 from aiogram.filters import Command, CommandStart
-
 from aiogram.types import Message
-from tools.scheduler import send_anekdot, send_goodnight
+from loguru import logger
 
+from utils.scheduler import send_goodnight
 from config import settings
+
 
 router = Router()
 
+
 @router.message(CommandStart())
-async def start(message: Message):
-    await message.answer('Привет я Фрося')
+async def start(message: Message) -> None:
+    """
+    Команда /start — приветствие.
+    """
+    await message.answer("Привет! Я Фрося 🐱")
+    logger.info(f"Пользователь {message.from_user.id} использовал /start, chat_id={message.chat.id}")
 
-@router.message(Command('check'))
-async def check(message: Message):
-    if message.from_user.id == settings.admin_id:
-         await message.bot.send_message(settings.channel_id, 'hello world')
 
-@router.message(Command('anekdot'))
-async def anekdot(message: Message):
-    if message.from_user.id == settings.admin_id:
-        await send_anekdot(message.bot)
+@router.message(Command("check"))
+async def check(message: Message) -> None:
+    """
+    Команда /check для проверки работы бота.
+    """
+    if message.from_user.id == settings.ADMIN_ID:
+        await message.bot.send_message(settings.CHAT_ID, "✅ Бот работает")
+        logger.info("Выполнена команда /check от администратора")
 
-@router.message(Command('goodnight'))
-async def good_night(message: Message):
-    if message.from_user.id == settings.admin_id:
+
+@router.message(Command("goodnight"))
+async def good_night(message: Message) -> None:
+    """
+    Команда /goodnight для ручного запуска отправки сообщения.
+    """
+    if message.from_user.id == settings.ADMIN_ID:
         await send_goodnight(message.bot)
-
-
+        logger.info("Команда /goodnight выполнена админом")

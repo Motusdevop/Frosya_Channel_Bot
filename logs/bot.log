@@ -1,0 +1,45 @@
+2025-09-23 11:14:55.296 | INFO     | __main__:main:26 - Запуск Telegram-бота...
+2025-09-23 11:14:55.313 | SUCCESS  | __main__:main:33 - Бот успешно запущен. GOODNIGHT_TIME = 23:00
+2025-09-23 11:18:20.217 | INFO     | __main__:main:26 - Запуск Telegram-бота...
+2025-09-23 11:18:20.228 | SUCCESS  | __main__:main:33 - Бот успешно запущен. GOODNIGHT_TIME = 23:00
+2025-09-23 11:19:04.020 | INFO     | __main__:main:26 - Запуск Telegram-бота...
+2025-09-23 11:19:04.027 | SUCCESS  | __main__:main:33 - Бот успешно запущен. GOODNIGHT_TIME = 23:00
+2025-09-23 11:19:20.510 | INFO     | handlers.admin:start:19 - Пользователь 700178752 использовал /start
+2025-09-23 11:20:02.927 | INFO     | handlers.admin:start:19 - Пользователь 1087968824 использовал /start
+2025-09-23 11:21:34.591 | INFO     | __main__:main:26 - Запуск Telegram-бота...
+2025-09-23 11:21:34.600 | SUCCESS  | __main__:main:33 - Бот успешно запущен. GOODNIGHT_TIME = 23:00
+2025-09-23 11:22:17.793 | INFO     | __main__:main:26 - Запуск Telegram-бота...
+2025-09-23 11:22:17.801 | SUCCESS  | __main__:main:33 - Бот успешно запущен. GOODNIGHT_TIME = 23:00
+2025-09-23 11:22:23.546 | INFO     | handlers.admin:start:19 - Пользователь 700178752 использовал /start, chat_id=700178752
+2025-09-23 11:22:36.768 | INFO     | handlers.admin:start:19 - Пользователь 1087968824 использовал /start, chat_id=-1002033400870
+2025-09-23 11:22:55.052 | INFO     | __main__:main:26 - Запуск Telegram-бота...
+2025-09-23 11:22:55.060 | SUCCESS  | __main__:main:33 - Бот успешно запущен. GOODNIGHT_TIME = 23:00
+2025-09-23 11:23:05.675 | INFO     | handlers.admin:check:29 - Выполнена команда /check от администратора
+2025-09-23 11:23:40.110 | INFO     | utils.scheduler:send_goodnight:49 - Отправлено сообщение «Спокойной ночи» (2 фото кота в одном альбоме).
+2025-09-23 11:23:40.110 | INFO     | handlers.admin:good_night:39 - Команда /goodnight выполнена админом
+2025-09-23 11:23:45.636 | INFO     | utils.scheduler:send_goodnight:49 - Отправлено сообщение «Спокойной ночи» (1 фото кота в одном альбоме).
+2025-09-23 11:23:45.637 | INFO     | handlers.admin:good_night:39 - Команда /goodnight выполнена админом
+2025-09-23 11:25:24.195 | INFO     | utils.scheduler:send_goodnight:49 - Отправлено сообщение «Спокойной ночи» (3 фото кота в одном альбоме).
+2025-09-23 11:25:24.195 | INFO     | handlers.admin:good_night:39 - Команда /goodnight выполнена админом
+2025-09-23 11:29:00.915 | INFO     | __main__:main:26 - Запуск Telegram-бота...
+2025-09-23 11:29:00.926 | SUCCESS  | __main__:main:33 - Бот успешно запущен. GOODNIGHT_TIME = 23:00
+2025-09-23 11:29:16.212 | INFO     | utils.scheduler:send_goodnight:49 - Отправлено сообщение «Спокойной ночи» (2 фото кота в одном альбоме).
+2025-09-23 11:29:16.212 | INFO     | handlers.admin:good_night:39 - Команда /goodnight выполнена админом
+2025-09-23 11:29:52.937 | INFO     | __main__:main:26 - Запуск Telegram-бота...
+2025-09-23 11:29:52.944 | SUCCESS  | __main__:main:33 - Бот успешно запущен. GOODNIGHT_TIME = 23:00
+2025-09-23 11:29:57.093 | INFO     | utils.scheduler:send_goodnight:49 - Отправлено сообщение «Спокойной ночи» (3 фото кота в одном альбоме).
+2025-09-23 11:29:57.093 | INFO     | handlers.admin:good_night:39 - Команда /goodnight выполнена админом
+2025-09-23 11:29:59.783 | INFO     | utils.scheduler:send_goodnight:49 - Отправлено сообщение «Спокойной ночи» (3 фото кота в одном альбоме).
+2025-09-23 11:29:59.783 | INFO     | handlers.admin:good_night:39 - Команда /goodnight выполнена админом
+2025-09-23 11:30:01.599 | INFO     | utils.scheduler:send_goodnight:49 - Отправлено сообщение «Спокойной ночи» (1 фото кота в одном альбоме).
+2025-09-23 11:30:01.599 | INFO     | handlers.admin:good_night:39 - Команда /goodnight выполнена админом
+2025-09-23 11:30:03.626 | INFO     | utils.scheduler:send_goodnight:49 - Отправлено сообщение «Спокойной ночи» (1 фото кота в одном альбоме).
+2025-09-23 11:30:03.627 | INFO     | handlers.admin:good_night:39 - Команда /goodnight выполнена админом
+2025-09-23 11:30:05.550 | INFO     | utils.scheduler:send_goodnight:49 - Отправлено сообщение «Спокойной ночи» (3 фото кота в одном альбоме).
+2025-09-23 11:30:05.550 | INFO     | handlers.admin:good_night:39 - Команда /goodnight выполнена админом
+2025-09-23 11:30:08.195 | INFO     | utils.scheduler:send_goodnight:49 - Отправлено сообщение «Спокойной ночи» (1 фото кота в одном альбоме).
+2025-09-23 11:30:08.200 | INFO     | handlers.admin:good_night:39 - Команда /goodnight выполнена админом
+2025-09-23 11:30:10.265 | INFO     | utils.scheduler:send_goodnight:49 - Отправлено сообщение «Спокойной ночи» (1 фото кота в одном альбоме).
+2025-09-23 11:30:10.265 | INFO     | handlers.admin:good_night:39 - Команда /goodnight выполнена админом
+2025-09-23 11:30:12.516 | INFO     | utils.scheduler:send_goodnight:49 - Отправлено сообщение «Спокойной ночи» (2 фото кота в одном альбоме).
+2025-09-23 11:30:12.516 | INFO     | handlers.admin:good_night:39 - Команда /goodnight выполнена админом

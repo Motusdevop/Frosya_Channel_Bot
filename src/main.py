@@ -1,32 +1,36 @@
 import asyncio
-
 from multiprocessing import Process
 
 from aiogram import Bot, Dispatcher
+from loguru import logger
 
 from config import settings
-from tools import scheduler
-
+from utils.scheduler import start_scheduler
 from handlers.admin import router as admin_router
 
-bot = Bot(token=settings.bot_token.get_secret_value())
+
+bot = Bot(token=settings.BOT_TOKEN.get_secret_value())
 
 
-def worker():
-    asyncio.run((scheduler.scheduler(bot)))
+def worker() -> None:
+    """
+    Фоновый процесс для запуска планировщика заданий.
+    """
+    asyncio.run(start_scheduler(bot))
 
 
-async def main():
+async def main() -> None:
+    """
+    Точка входа для запуска Telegram-бота.
+    """
+    logger.info("Запуск Telegram-бота...")
     dp = Dispatcher()
-
-    # dp.include_routers(base_router, appointment_router, register_router, admin_router)
     dp.include_router(admin_router)
 
-    process = Process(target=worker)
+    process = Process(target=worker, daemon=True)
     process.start()
 
-    print('Bot Started')
-    print(f'ANEKDOT_TIME = {settings.anekdot_time}\nNIGHT_TIME = {settings.night_time}')
+    logger.success(f"Бот успешно запущен. GOODNIGHT_TIME = {settings.GOODNIGHT_TIME}")
 
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
@@ -34,5 +38,6 @@ async def main():
     process.join()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
+    logger.add("logs/bot.log", rotation="1 day", compression="zip")
     asyncio.run(main())
