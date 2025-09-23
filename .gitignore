@@ -1,5 +1,8 @@
 *.env
 
+.env.*
+logs/
+
 .idea/
 
 src/__pycache__/

@@ -1,0 +1,21 @@
+services:
+  goodnight-bot:
+    build: .
+    container_name: goodnight-bot
+    restart: unless-stopped
+    env_file:
+      - ${ENV_FILE}              # <--- сюда положите BOT_TOKEN и другие секреты (не в git!)
+    environment:
+      # можно переопределить или добавить переменные здесь
+      GOODNIGHT_TIME: "23:00"
+      # LOG_LEVEL: "INFO"
+    volumes:
+      - ./logs:/var/log/mybot    # собираем логи на хосте
+    # если нужно открыть порты (обычно не требуется для бота)
+    # ports:
+    #   - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys; sys.exit(0)"]
+      interval: 1m
+      timeout: 10s
+      retries: 3
