@@ -2,3 +2,4 @@ aiogram
 requests
 pydantic_settings
 loguru
+pytz

@@ -1,6 +1,7 @@
 import asyncio
 import datetime
 import random
+from pytz import timezone
 
 from aiogram.client.bot import Bot
 from aiogram.types import InputMediaPhoto
@@ -19,7 +20,7 @@ async def start_scheduler(bot: Bot) -> None:
     logger.info(f"Планировщик запущен. GOODNIGHT_TIME = {night_time}")
 
     while True:
-        current_time = datetime.datetime.now().strftime("%H:%M")
+        current_time = datetime.datetime.now(timezone("Europe/Moscow")).strftime("%H:%M")
         if current_time == night_time:
             await send_goodnight(bot)
         await asyncio.sleep(60)
